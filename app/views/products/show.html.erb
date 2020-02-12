@@ -14,7 +14,8 @@
   <strong>Price:</strong>
   <%= @product.price %>
 </p>
-<% if @product.image.attached? %>
+
+  <% if @product.image.attached? %>
     <div class="col-md-4">
       <p>
         <br>
@@ -22,6 +23,8 @@
           <%= image_tag @product.image %>
         </div>
       </p>
-      <% end %>
+    </div>
+  <% end %>
+
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

@@ -25,8 +25,10 @@
     <%= form.label :price %>
     <%= form.text_field :price %>
   </div>
-<%= form.file_field :image, class: "imagePost"%></br>
-<%= select_tag(:category_id, options_from_collection_for_select(Category.all, :id, :name), include_blank: "Select Category") %>
+
+    <%= form.file_field :image, class: "imagePost"%></br>
+    <%= select_tag(:category_id, options_from_collection_for_select(Category.all, :id, :name), include_blank: "Select Category") %>
+
   <div class="actions">
     <%= form.submit %>
   </div>
